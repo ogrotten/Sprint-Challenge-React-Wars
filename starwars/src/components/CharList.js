@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CharInfo from "./CharInfo";
-import styled from "styled-components";
 
 
 export default function CharList() {
 	const [allchar, setChar] = useState([]);
-
-	useEffect(() => {/* for pagination */})
 
 	useEffect(() => {
 		axios
