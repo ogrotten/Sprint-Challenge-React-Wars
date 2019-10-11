@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CharInfo from "./CharInfo";
+import styled from "styled-components";
+
 
 export default function CharList() {
 	const [allchar, setChar] = useState([]);
@@ -19,10 +21,10 @@ export default function CharList() {
 			});
 	}, []);
 	return (
-		<div className="char">
+		<>
 			{allchar.map((char, index) => {
 				return <CharInfo key={index} name={char.name} gender={char.gender} hair_color={char.hair_color} />;
 			})}
-		</div>
+		</>
 	);
 }
